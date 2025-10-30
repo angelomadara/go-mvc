@@ -8,17 +8,19 @@ import (
 	"mvc-app/models"
 )
 
-// UserService handles all user-related business logic and database operations
+// UserService handles all user-related business logic and database operations (it's like class name)
 type UserService struct {
 	db *sql.DB
 }
 
-// NewUserService creates a new user service
+// NewUserService creates a new user service (constructor)
 func NewUserService(db *sql.DB) *UserService {
 	return &UserService{
 		db: db,
 	}
 }
+
+// (below are the methods equivalent in class)
 
 // GetAllUsers retrieves all users from the database
 func (s *UserService) GetAllUsers() ([]models.User, error) {
